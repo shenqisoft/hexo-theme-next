@@ -351,6 +351,12 @@
     {### END POST BODY ###}
     {#####################}
 
+    {% if not is_index%}
+      <div>
+        {% include 'advert.swig' %}
+      </div>
+    {% endif %}
+
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}
